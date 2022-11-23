@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221118 06:42:58.353" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1 GET Request" source="C:\Users\TemkarNa\PycharmProjects\pythonProject\testcases\TC1_GET_Request.robot">
+<test id="s1-t1" name="Get_weatherInfo" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysesion</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221118 06:42:58.453" level="INFO">Creating Session using : alias=mysesion, url=http://restapi.demoqa.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221118 06:42:58.453" endtime="20221118 06:42:58.453"/>
+</kw>
+<kw name="get request mysesion /utilities/weather/city/${city}">
+<var>${response}</var>
+<msg timestamp="20221118 06:42:58.455" level="FAIL">No keyword with name 'get request mysesion /utilities/weather/city/${city}' found. Did you try using keyword 'RequestsLibrary.GET' or 'RequestsLibrary.Get Request' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20221118 06:42:58.455" endtime="20221118 06:42:58.455"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221118 06:42:58.455" endtime="20221118 06:42:58.455"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221118 06:42:58.456" endtime="20221118 06:42:58.456"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.headers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221118 06:42:58.456" endtime="20221118 06:42:58.456"/>
+</kw>
+<status status="FAIL" starttime="20221118 06:42:58.453" endtime="20221118 06:42:58.457">No keyword with name 'get request mysesion /utilities/weather/city/${city}' found. Did you try using keyword 'RequestsLibrary.GET' or 'RequestsLibrary.Get Request' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<status status="FAIL" starttime="20221118 06:42:58.355" endtime="20221118 06:42:58.458"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC1 GET Request">TC1 GET Request</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
