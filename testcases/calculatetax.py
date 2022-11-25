@@ -4,9 +4,9 @@ from datetime import date
 def calculate(salary, age, taxpaid, Gender):
     #Gender = "M"
     if Gender := "M":
-        return (salary-taxpaid)*calculate_income_tax(age)+500
+        return ((salary-taxpaid)*calculate_income_tax(age))+500
     elif Gender := "F":
-        return (salary-taxpaid)*calculate_income_tax(age)+0
+        return ((salary-taxpaid)*calculate_income_tax(age))+0
 
 
 def calculate_income_tax(age:

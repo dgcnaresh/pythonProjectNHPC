@@ -3,7 +3,7 @@
   "birthday": "11121989",
   "gender": "M",
   "name": "Naresh kumar",
-  "natid": "S10",
+  "natid": "S0000029",
   "salary": "100",
   "tax": "10"
 },
@@ -11,7 +11,7 @@
   "birthday": "11121990",
   "gender": "F",
   "name": "Temkar",
-  "natid": "S11",
+  "natid": "S0000030",
   "salary": "1000",
   "tax": "15"
 }

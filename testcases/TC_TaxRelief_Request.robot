@@ -17,23 +17,22 @@ Post_Hero_data_Tax_Relief
     create session  mysession   ${base_url}
     ${body}=    Load JSON from file    ${CURDIR}/Applicationfiles/data.json
     ${header}=  create dictionary   Content-Type=application/json
-    #${responsevalue}=   post request  mysession  /calculator/insert  data=${body}  headers=${header}
+    ${responsevalue}=   post request  mysession  /calculator/insert  data=${body}  headers=${header}
 
-    #log to console  ${responsevalue.status_code}
-    #log to console  ${responsevalue.content}
+    log to console  ${responsevalue.status_code}
+    log to console  ${responsevalue.content}
     log to console  ${body}[gender]
 
    #${the data}=    Evaluate    json.loads($body)    json
 
     log to console  ${body}
     ${salary}   Get Value From Json    ${body}    $.[:1].salary
-    #set to dictionary    ${salary}    dp=the new value
     ${salaryvalue}=  Convert To String  ${salary}
     log to console   ${salaryvalue}
 
     #Validations
-    #${status_code}=  convert to string  ${responsevalue.status_code}
-    #Should be equal  ${status_code}  202
+    ${status_code}=  convert to string  ${responsevalue.status_code}
+    Should be equal  ${status_code}  202
 
     ${responsevalue}=  Get Request  mysession  /calculator/taxRelief
     #to validate the content of the response body

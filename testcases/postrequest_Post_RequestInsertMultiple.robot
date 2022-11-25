@@ -31,8 +31,8 @@ Post_Hero_InsertMultipledata
     log to console  ${responsevalue}
     #Validation point to validate the hero id added in the database.
     ${response_body}=  convert to string   ${responsevalue.content}
-    should contain     ${response_body}    S10
-    should contain     ${response_body}    S11
+    should contain     ${response_body}    S0000029
+    should contain     ${response_body}    S0000030
 
 
 

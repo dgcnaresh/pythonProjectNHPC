@@ -31,7 +31,7 @@ Post_Hero_data
     log to console  ${responsevalue}
     #Validation point to validate the hero id added in the database.
     ${response_body}=  convert to string   ${responsevalue.content}
-    should contain     ${response_body}    s01
+    should contain     ${response_body}    S0000221
 
 
 
